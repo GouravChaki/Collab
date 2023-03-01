@@ -43,17 +43,20 @@ export default function Signup() {
 
             <h2 className="login-heading">Welcome to Collab&#46;mp3</h2>
             <div className="input-details">
+              {/* username */}
               <input
                 type="text"
                 placeholder="Username"
               ></input>
             </div>
             <div className="input-details">
+              {/* Email address */}
               <input
                 type="text"
                 placeholder="Email address"
               ></input>
             </div>
+            {/* Password */}
             <div className="input-details">
               <input type="password" placeholder="Password"></input>
             </div>
