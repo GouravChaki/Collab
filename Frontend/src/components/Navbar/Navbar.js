@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from './logo.png'
-import profile from './profilepic.jpg'
+import profile from './prodiledefault.webp'
 export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary shadow">

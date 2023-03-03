@@ -17,7 +17,7 @@ export default function RenderLists(props) {
   return (
     <>
     <div className=" container my-5">
-        <h1 className="my-3" style={{marginLeft:"7%", color:(props.item.identity%2)?"#008E97":"rgb(255,84,5)",fontSize:"2.5rem"}}>{props.item.title}</h1>
+        <h1 className="my-3" style={{marginLeft:"7%", color:"#008E97",fontSize:"2.5rem"}}>{props.item.title}</h1>
         <div className="d-flex w-95">
         <MdChevronLeft className='opacity-50 btn' style={{marginTop:"10vh"}} size={200} onClick={handleLeft}/>
         <div id={`slider${props.item.identity}`} className="scroll row flex-row flex-nowrap" style={{overflow:"auto",margin:"auto"}}>

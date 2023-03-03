@@ -1,11 +1,16 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 export default function ListItems(props) {
-  const navigate = useNavigate();
-  const play = () => {
-    let path = "song";
-    navigate(path, { state: props.item });
-  };
+  let navigate=useNavigate();
+  const song=()=>{
+    let path='song'
+    navigate(path,{state:{
+      song:props.item.track.preview_url,
+      photo:props.item.track.album.images[0].url,
+      title:props.item.track.name,
+      artistName:props.item.track.artists[0].name,
+      releaseDate:props.item.track.album.release_date}})
+  }
   return (
     <>
       <div
@@ -48,7 +53,7 @@ export default function ListItems(props) {
               fill="rgb(255,84,5)"
               class="bi bi-play-circle-fill"
               viewBox="0 0 16 16"
-              onClick={play}
+              onClick={song}
             >
               <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z" />
             </svg>

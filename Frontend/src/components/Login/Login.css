@@ -14,6 +14,7 @@
     right: 0; 
     background-color: #373737b7;
 
+
 }
 
 .box {
@@ -26,11 +27,12 @@
     grid-template-columns: 1fr 2fr;
     overflow: hidden;
     background-size: cover;
-    visibility: hidden;
+    /* visibility: hidden; */
     transform: scale(.9);
     transition: .1s linear;
-    visibility: visible;
+    /* visibility: visible; */
     transform: scale(1);
+
 }
 
 

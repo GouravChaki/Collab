@@ -16,8 +16,9 @@ import Profile from './components/Profile/Profile';
 import Play from './components/Play/Play';
 import ContextData from './components/Context/HomeContext/ContextData';
 import Login from './components/Login/Login';
+import Signup from './components/Signup/Signup';
+
 function App() {
-  const [state,setState]=useState(false)
   return (
     <ContextData>
     <Router>
@@ -30,6 +31,7 @@ function App() {
         <Route path="/profile" element={<Profile/>}/>
         <Route path="/song" element={<Play/>}/>
         <Route path="/playlist/song" element={<Play/>}/>
+        <Route path="/signup" element={<Signup/>}/>
       </Routes>
     </Router>
     </ContextData>
