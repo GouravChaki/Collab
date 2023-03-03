@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import Context from './components/Context/HomeContext/Context';
+import DotLoader from "react-spinners/DotLoader";
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -18,7 +20,20 @@ import ContextData from './components/Context/HomeContext/ContextData';
 import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
 
+
 function App() {
+  // const a = useContext(Context);
+  // if (a.isLoading) {
+  //   return (
+  //     <div className="loader">
+  //     <DotLoader color="red"/>
+  //     </div>
+  //   );
+  // }
+  // useEffect(() => {
+  //   a.api();
+  // }, []);
+  // console.log(a.isLoading)  
   return (
     <ContextData>
     <Router>

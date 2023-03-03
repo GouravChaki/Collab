@@ -1,9 +1,12 @@
 import React, { useState, useContext, useEffect }  from "react";
+import DotLoader from "react-spinners/DotLoader"
 import List from "./List";
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 import ListItems from "./ListItems";
 import Context from "../Context/HomeContext/Context";
 export default function Playlist() {
+
+
   const handleList = (item)=>{
     if(item.track !== null)
     {
@@ -24,6 +27,15 @@ export default function Playlist() {
        let sibling = event.target.previousElementSibling;
        sibling.scrollLeft = sibling.scrollLeft+500;
    }
+   if (a.isLoading) {
+    return (
+      <div className="loader">
+      <DotLoader color="red"/>
+      </div>
+    );
+  }
+
+   
   return (
     <div>
         {/* {(a.mock).map(handleDb)} */}

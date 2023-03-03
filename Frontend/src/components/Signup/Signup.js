@@ -68,7 +68,6 @@ export default function Signup() {
             <div className="sign-up-section">
               <h2>Already have an account?</h2>
               <button className="sign-up-link" onClick={change}>Log in to Collab</button>
-              <div>dog</div>
             </div>
           </div>
         </div>

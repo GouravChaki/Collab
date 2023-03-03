@@ -8,7 +8,8 @@ export default function Profileitems(props) {
       <div className="card mx-2 my-2 shadow mb-5" style={{ width: "22.3rem", borderRadius: "50%", borderStyle:"solid",borderColor:"#008E97",borderSize:"0.5px"}}>
         <img
           className="my-3"
-          src={props.item.img}
+          alt="..."
+          src={props.item.track.album.images[0].url}
           style={{
             position: "relative",
             borderRadius: "50%",
@@ -29,7 +30,7 @@ export default function Profileitems(props) {
           </svg>
           </a>
         <div className="card-body">
-          <h6 className="card-title" style={{textAlign:"center",size:"3rem"}}>{props.item.text}</h6>
+          <h6 className="card-title" style={{textAlign:"center",size:"3rem"}}>{props.item.track.artists[0].name}</h6>
         </div>
       </div>
     </>

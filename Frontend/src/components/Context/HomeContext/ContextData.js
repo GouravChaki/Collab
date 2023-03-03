@@ -4,9 +4,12 @@ import Context from './Context.js';
 export default function ContextData(props) {
     const [Data,setData]=useState([])
     const [mock,setMock]=useState([])
+    const [isLoading,setIsLoading]=useState(true)
     const [visible,setVisible]=useState(1)
+    const [mock2,setMock2]=useState([])
     const api=async()=>{
     try{
+      setIsLoading(true);
       const options = {
         method: 'GET',
         url: 'https://spotify23.p.rapidapi.com/playlist_tracks/',
@@ -19,6 +22,8 @@ export default function ContextData(props) {
       const res =await axios.request(options)
       setData(res.data.items)
       setMock(res.data.items)
+      setMock2(res.data.items)
+      setIsLoading(false);
       console.log(res.data.items)
   }
       catch(error){
@@ -33,7 +38,7 @@ export default function ContextData(props) {
       },5000)
 }
   return (
-    <Context.Provider value={{Data,setData,log,setLog,login,mock,setMock,api,visible,setVisible}}>
+    <Context.Provider value={{Data,setData,log,setLog,login,mock,setMock,api,visible,setVisible,mock2,setMock2,isLoading}}>
         {props.children}
     </Context.Provider>
   )

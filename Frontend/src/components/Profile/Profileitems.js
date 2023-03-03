@@ -4,11 +4,11 @@ export default function Profileitems(props) {
   // add hover on cards and svg
   // remove the scroller
   const play = (event) => {
-    let a = document.getElementById(`play${props.item.id}`);
+    let a = document.getElementById(`play${props.item.track.id}`);
     a.style.visibility = "visible";
   };
   const play2 = (event) => {
-    let a = document.getElementById(`play${props.item.id}`);
+    let a = document.getElementById(`play${props.item.track.id}`);
     a.style.visibility = "hidden";
   };
   return (
@@ -30,7 +30,7 @@ export default function Profileitems(props) {
           style={{
             position: "relative",
             borderRadius: "40px",
-            backgroundImage: `url(${props.item.img})`,
+            backgroundImage: `url(${props.item.track.album.images[0].url})`,
             backgroundSize: "contain",
             backgroundPosition: "center center",
             backgroundRepeat: "no-repeat",
@@ -40,7 +40,7 @@ export default function Profileitems(props) {
           <a
             href="/"
             className="mb-n3"
-            id={`play${props.item.id}`}
+            id={`play${props.item.track.id}`}
             style={{ visibility: "hidden" }}
           >
             <svg
@@ -69,7 +69,7 @@ export default function Profileitems(props) {
             className="card-title"
             style={{ textAlign: "center", size: "3rem" }}
           >
-            {props.item.text}
+            {props.item.track.name}
           </h6>
         </div>
       </div>

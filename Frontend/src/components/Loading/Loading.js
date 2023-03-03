@@ -1,9 +1,7 @@
 import React from 'react'
-
+import DotLoader from "react-spinners/DotLoader"
 export default function Loading() {
   return (
-    <div>
-      Loading...
-    </div>
+    <><DotLoader color="#36d7b7" /></>
   )
 }
