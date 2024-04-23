@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.cardmys:hover{
+  transform: scale(1.05);
+  transition:ease-in-out;
+  transition-duration: 300ms;
+  box-shadow: 0 10px 20px rgba(0,0,0,.8), 0 4px 8px rgba(0,0,0,1);
+}
+#mystery{
+  display:none;
+}
+
+.scroll::-webkit-scrollbar { width: 0 !important }
+.scroll { overflow: -moz-scrollbars-none; }
+.scroll { -ms-overflow-style: none; }
+
+.card:hover{
+  transform: scale(1.05);
+  transition:ease-in-out;
+  transition-duration: 300ms;
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.icn:hover{
+  transform: scale(1.05);
+  transition:ease-in-out;
+  transition-duration: 300ms;
+}
+.icn:active{
+  color:white;
+  transition:200ms;
+}
+
+.profilepic{
+  width:25%;
+  height: 60%;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 4px;
+  margin-right:100px;
+  border-color:#008E97;
+}
+
+.profile{
+  padding-top: 8vh;
+  padding-bottom:10vh;
+  padding-left:8%;
+  display: flex;
+  align-items:center;
+}
+
+.options{
+  margin-left:35%;
+}
+
+.opt{
+  text-align: left;
+  font-weight: 800;
+  font-size:20px;
+  color: #008E97;
+}
+
+.opt:hover{
+  transform: scale(1.05);
+  transition:ease-in-out;
+  transition-duration: 300ms;
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
